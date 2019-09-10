@@ -33,11 +33,11 @@ grammar_zjwJava：true
 
   - web页面管理中创建(访问：http://ip:15672，默认账号：guest，密码guest)
     - 创建交换器
-      - ![](images\cjjhj.png)
+      - ![](./images/cjjhj.png)
     - 创建队列
-      - ![](images\cjdl.png)
+      - ![./](images/cjdl.png)
     - 交换器绑定队列
-      - ![](images\bddl.png)
+      - ![](./images/bddl.png)
       - 需要点击要进行绑定的交换器，然后再进行绑定，路由键就是消息到达交换器后的匹配规则，将消息放到与交换器绑定的队列且满足匹配规则的路由键的队列中，每种交换器都不同。
 
   - 代码创建
