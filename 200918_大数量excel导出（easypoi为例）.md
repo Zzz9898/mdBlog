@@ -208,7 +208,11 @@
           File file = new File(downloadFilePath);
           if (file.exists()) {
               response.setContentType("application/force-download");// 设置强制下载不打开
-              response.addHeader("Content-Disposition", "attachment;fileName=" + fileName);
+              try {
+                response.addHeader("Content-Disposition", "attachment;fileName=" + URLEncoder.encode(fileName, "UTF-8"));
+              } catch (UnsupportedEncodingException e) {
+                  e.printStackTrace();
+              }
               byte[] buffer = new byte[1024];
               FileInputStream fis = null;
               BufferedInputStream bis = null;
